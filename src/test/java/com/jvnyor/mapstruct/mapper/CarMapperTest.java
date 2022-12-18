@@ -31,17 +31,15 @@ class CarMapperTest {
     }
 
     @Test
-    void carToCarDTO() {
+    void givenCarEntitytoCar_whenMaps_thenCorrect() {
         CarDTO carToCarDTO = carMapper.carToCarDTO(car);
-        assertEquals(carToCarDTO, carDTO);
         assertEquals(carToCarDTO.getId(), carDTO.getId());
         assertEquals(carToCarDTO.getName(), carDTO.getName());
     }
 
     @Test
-    void carDTOToCar() {
+    void givenCarDTOtoCarEntity_whenMaps_thenCorrect() {
         Car carDTOToCar = carMapper.carDTOToCar(carDTO);
-        assertEquals(carDTOToCar, car);
         assertEquals(carDTOToCar.getId(), car.getId());
         assertEquals(carDTOToCar.getName(), car.getName());
     }
