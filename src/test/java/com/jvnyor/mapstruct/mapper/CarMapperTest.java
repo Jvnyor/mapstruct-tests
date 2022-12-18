@@ -33,6 +33,7 @@ class CarMapperTest {
     @Test
     void carToCarDTO() {
         CarDTO carToCarDTO = carMapper.carToCarDTO(car);
+        assertEquals(carToCarDTO, carDTO);
         assertEquals(carToCarDTO.getId(), carDTO.getId());
         assertEquals(carToCarDTO.getName(), carDTO.getName());
     }
@@ -40,6 +41,7 @@ class CarMapperTest {
     @Test
     void carDTOToCar() {
         Car carDTOToCar = carMapper.carDTOToCar(carDTO);
+        assertEquals(carDTOToCar, car);
         assertEquals(carDTOToCar.getId(), car.getId());
         assertEquals(carDTOToCar.getName(), car.getName());
     }
